@@ -54,24 +54,12 @@
 {
     if (!self.scc) return;
     
-    if (_platform) {
-        if (_userPswTextField.text == _platform.userPsw &&
-            _userNameTextField.text == _platform.userName &&
-            _otherPswTextField.text == _platform.otherPsw &&
-            _platformNameTextField.text == _platform.platformName &&
-            _platformAddressTextField.text == _platform.platformAddress &&
-            _platformDescriptionTextView.text == _platform.platformDescription) return;
-        self.scc(_platform);
-    } else {
-        Platform *platform = [[Platform alloc] init];
-        platform.userName = _userNameTextField.text;
-        platform.userPsw = _userPswTextField.text;
-        platform.otherPsw = _otherPswTextField.text;
-        platform.platformName = _platformNameTextField.text;
-        platform.platformAddress = _platformAddressTextField.text;
-        platform.platformDescription = _platformDescriptionTextView.text;
-        self.scc(platform);
-    }
+    Platform *platform = [[Platform alloc] initWithPlatformName:_platformNameTextField.text
+                                                platformAddress:_platformAddressTextField.text
+                                            platformDescription:_platformDescriptionTextView.text
+                                                       userName:_userNameTextField.text
+                                                        userPsw:_userPswTextField.text otherPsw:_otherPswTextField.text];
+    self.scc(platform);
     [self.navigationController popViewControllerAnimated:YES];
 }
 

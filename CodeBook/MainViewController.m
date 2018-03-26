@@ -110,9 +110,10 @@ static NSString *const kPlatformCellID = @"kPlatformCellID";
     return _tableView;
 }
 
-- (void)toPlatformDetailVCWithPlatform:(Platform *)platform
+- (void)toPlatformDetailVCWithPlatform:(Platform *)currentPlatform
 {
-    PlatformDetailViewController *platformDetailVc = [[PlatformDetailViewController alloc] initWithPlatform:platform editScc:^(Platform *platform) {
+    PlatformDetailViewController *platformDetailVc = [[PlatformDetailViewController alloc] initWithPlatform:currentPlatform editScc:^(Platform *platform) {
+        [self.viewModel deletePlatform:currentPlatform];
         [self.viewModel addPlatform:platform];
         [self.tableView reloadData];
     }];

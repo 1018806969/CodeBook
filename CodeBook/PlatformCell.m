@@ -34,6 +34,8 @@
     self.platformNameLabel.text = platfrom.platformName;
     self.platformDescriptionLabel.text = platfrom.platformDescription;
     
+    if (!platfrom.platformAddress) return;
+    
     self.platformAddressLabel.textColor = [UIColor blueColor];
     NSMutableAttributedString *content = [[NSMutableAttributedString alloc] initWithString:platfrom.platformAddress];
     [content addAttribute:NSUnderlineStyleAttributeName value:[NSNumber numberWithInteger:NSUnderlineStyleSingle] range:NSRangeFromString(platfrom.platformAddress)];

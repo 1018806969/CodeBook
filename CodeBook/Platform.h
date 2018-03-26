@@ -20,6 +20,13 @@
 
 @property (nonatomic, assign) CGFloat descriptionHeight;
 
+- (instancetype)initWithPlatformName:(NSString *)platformName
+                     platformAddress:(NSString *)platformAddress
+                 platformDescription:(NSString *)platformDescription
+                            userName:(NSString *)userName
+                             userPsw:(NSString *)userPsw
+                            otherPsw:(NSString *)otherPsw;
+
 @end
 
 

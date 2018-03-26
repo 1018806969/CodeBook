@@ -94,8 +94,6 @@
 
 - (void)verifyPsw
 {
-    [self toMainPage];
-    return;
     if ([UIDevice currentDevice].systemVersion.floatValue > 8.0) {//支持touchID
         [self touchuIDVerfiy];
     } else {

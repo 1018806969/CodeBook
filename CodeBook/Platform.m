@@ -10,6 +10,25 @@
 
 @implementation Platform
 
+- (instancetype)initWithPlatformName:(NSString *)platformName
+                     platformAddress:(NSString *)platformAddress
+                 platformDescription:(NSString *)platformDescription
+                            userName:(NSString *)userName
+                             userPsw:(NSString *)userPsw
+                            otherPsw:(NSString *)otherPsw;
+{
+    self = [super init];
+    if (self) {
+        self.userName = userName;
+        self.userPsw = userPsw;
+        self.otherPsw = otherPsw;
+        self.platformName = platformName;
+        self.platformAddress = platformAddress;
+        self.platformDescription = platformDescription;
+    }
+    return self;
+}
+
 - (void)encodeWithCoder:(NSCoder *)aCoder
 {
     [aCoder encodeObject:self.userName forKey:@"userName"];

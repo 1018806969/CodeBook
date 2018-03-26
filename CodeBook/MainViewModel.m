@@ -37,7 +37,7 @@
     }
     
     if (![_platforms containsObject:platform]) {
-        [_platforms addObject:platform];
+        [_platforms insertObject:platform atIndex:0];
     }
     [NSKeyedArchiver archiveRootObject:_platforms toFile:[self filePath]];
 }
@@ -49,6 +49,11 @@
     [NSKeyedArchiver archiveRootObject:_platforms toFile:[self filePath]];
 }
 
+- (void)deletePlatform:(Platform *)platform
+{
+    if (!_platforms.count || ![_platforms containsObject:platform]) return;
+    [_platforms removeObject:platform];
+}
 - (void)editPlatformAtIndex:(NSInteger)index
 {
     if (_platforms.count <= index) return;

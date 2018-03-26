@@ -23,6 +23,7 @@
 		D7064CD1205E19BC003C9F69 /* PlatformDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7064CCF205E19BC003C9F69 /* PlatformDetailViewController.m */; };
 		D7064CD2205E19BC003C9F69 /* PlatformDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7064CD0205E19BC003C9F69 /* PlatformDetailViewController.xib */; };
 		D7064CD5205E7556003C9F69 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7064CD4205E7556003C9F69 /* WebViewController.m */; };
+		D7393FC22068A6C800B263D9 /* NSString+HelpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = D7393FC12068A6C800B263D9 /* NSString+HelpTools.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +45,6 @@
 		D7064CBE205E092F003C9F69 /* MainViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewModel.m; sourceTree = "<group>"; };
 		D7064CC0205E097E003C9F69 /* Platform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
 		D7064CC1205E097E003C9F69 /* Platform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
-		D7064CC5205E1134003C9F69 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		D7064CC9205E1575003C9F69 /* PlatformCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlatformCell.h; sourceTree = "<group>"; };
 		D7064CCA205E1575003C9F69 /* PlatformCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlatformCell.m; sourceTree = "<group>"; };
 		D7064CCB205E1575003C9F69 /* PlatformCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlatformCell.xib; sourceTree = "<group>"; };
@@ -53,6 +53,9 @@
 		D7064CD0205E19BC003C9F69 /* PlatformDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlatformDetailViewController.xib; sourceTree = "<group>"; };
 		D7064CD3205E7556003C9F69 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		D7064CD4205E7556003C9F69 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		D7393FC02068A6C800B263D9 /* NSString+HelpTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+HelpTools.h"; sourceTree = "<group>"; };
+		D7393FC12068A6C800B263D9 /* NSString+HelpTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+HelpTools.m"; sourceTree = "<group>"; };
+		D7393FC32068A8A600B263D9 /* CodeBookHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeBookHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +106,9 @@
 				D7064CD0205E19BC003C9F69 /* PlatformDetailViewController.xib */,
 				D7064CD3205E7556003C9F69 /* WebViewController.h */,
 				D7064CD4205E7556003C9F69 /* WebViewController.m */,
-				D7064CC5205E1134003C9F69 /* Header.h */,
+				D7393FC02068A6C800B263D9 /* NSString+HelpTools.h */,
+				D7393FC12068A6C800B263D9 /* NSString+HelpTools.m */,
+				D7393FC32068A8A600B263D9 /* CodeBookHeader.h */,
 				D7064CAB205CD040003C9F69 /* Info.plist */,
 				D7064CBC205E08E7003C9F69 /* Resource */,
 			);
@@ -200,6 +205,7 @@
 			files = (
 				D7064CD1205E19BC003C9F69 /* PlatformDetailViewController.m in Sources */,
 				D7064CA2205CD040003C9F69 /* ViewController.m in Sources */,
+				D7393FC22068A6C800B263D9 /* NSString+HelpTools.m in Sources */,
 				D7064CAD205CD040003C9F69 /* main.m in Sources */,
 				D7064C9F205CD040003C9F69 /* AppDelegate.m in Sources */,
 				D7064CD5205E7556003C9F69 /* WebViewController.m in Sources */,

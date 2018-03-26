@@ -19,6 +19,8 @@
 
 - (void)deletePlatformAtIndex:(NSInteger)index;
 
+- (void)deletePlatform:(Platform *)platform;
+
 - (void)moveRowAtIndex:(NSInteger)index toIndex:(NSInteger)destinationIndex;
 
 @end

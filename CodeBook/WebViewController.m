@@ -8,6 +8,7 @@
 
 #import "WebViewController.h"
 #import <WebKit/WebKit.h>
+#import "CodeBookHeader.h"
 
 @interface WebViewController ()
 
@@ -31,13 +32,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.view addSubview:self.webView];
+    
+    BOOL isURL = [_url isURL];
+    if (isURL) {
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
+    } else {
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.baidu.com"]]];
+    }
 }
 
 - (WKWebView *)webView
 {
     if (!_webView) {
         _webView = [[WKWebView alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_url]]];
     }
     return _webView;
 }
