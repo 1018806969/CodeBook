@@ -11,4 +11,7 @@
 
 #import "NSString+HelpTools.h"
 
+#define kScreen_w [UIScreen mainScreen].bounds.size.width
+#define kScreen_h [UIScreen mainScreen].bounds.size.height
+
 #endif /* CodeBookHeader_h */

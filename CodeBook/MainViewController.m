@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "CodeBookHeader.h"
 #import "PlatformDetailViewController.h"
 #import "WebViewController.h"
 #import "PlatformCell.h"
@@ -34,6 +35,12 @@ static NSString *const kPlatformCellID = @"kPlatformCellID";
     [self.view addSubview:self.tableView];
     self.viewModel = [[MainViewModel alloc] init];
     [self.viewModel loadPlatforms];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.tableView setEditing:NO animated:NO];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -97,10 +104,11 @@ static NSString *const kPlatformCellID = @"kPlatformCellID";
     Platform *platform = self.viewModel.platforms[indexPath.row];
     return 137 + platform.descriptionHeight;
 }
+
 - (UITableView *)tableView
 {
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, kScreen_w, kScreen_h) style:UITableViewStylePlain];
         [_tableView registerNib:[UINib nibWithNibName:@"PlatformCell" bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kPlatformCellID];
         _tableView.rowHeight = 137;
         _tableView.delegate = self;

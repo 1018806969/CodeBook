@@ -6,9 +6,10 @@
 //  Copyright © 2018年 lq. All rights reserved.
 //
 
+#import <LocalAuthentication/LocalAuthentication.h>
+#import "CodeBookHeader.h"
 #import "ViewController.h"
 #import "MainViewController.h"
-#import <LocalAuthentication/LocalAuthentication.h>
 
 @interface ViewController ()<CALayerDelegate>
 
@@ -35,6 +36,7 @@
     CGContextDrawImage(ctx, CGRectMake(0, 0, 100, 100), image.CGImage);
     CGContextRestoreGState(ctx);
 }
+
 - (void)touchuIDVerfiy
 {
     LAContext *context = [[LAContext alloc] init];
@@ -73,7 +75,7 @@
 - (void)addHeaderLayer
 {
     CALayer *headerLayer = [CALayer layer];
-    headerLayer.position = CGPointMake([UIScreen mainScreen].bounds.size.width/2.0, [UIScreen mainScreen].bounds.size.height/2.0 - 200.0);
+    headerLayer.position = CGPointMake(kScreen_w/2.0, kScreen_h/2.0 - 200.0);
     headerLayer.bounds = CGRectMake(0, 0, 100, 100);
     headerLayer.cornerRadius = 50;
     headerLayer.masksToBounds = YES;
@@ -85,7 +87,7 @@
 - (void)addfingerPrintImageView
 {
     UIImageView *fingerPrintImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fingerprint.jpeg"]];
-    fingerPrintImageView.frame = CGRectMake([UIScreen mainScreen].bounds.size.width/2.0-40, [UIScreen mainScreen].bounds.size.height/2.0-40, 80, 80);
+    fingerPrintImageView.frame = CGRectMake(kScreen_w/2.0-40, kScreen_h/2.0-40, 80, 80);
     fingerPrintImageView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(verifyPsw)];
     [fingerPrintImageView addGestureRecognizer:tapGesture];
@@ -105,7 +107,7 @@
 
 - (void)addTipLabel
 {
-    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height/2.0+50, [UIScreen mainScreen].bounds.size.width, 40)];
+    UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, kScreen_h/2.0+50, kScreen_w, 40)];
     tipLabel.textAlignment = NSTextAlignmentCenter;
     tipLabel.textColor = [UIColor blueColor];
     tipLabel.text = @"点击进行指纹解锁";
