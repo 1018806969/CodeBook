@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlatformDetailViewController">
+            <connections>
+                <outlet property="otherPswTextField" destination="Fd5-Ft-NtN" id="WYq-PQ-YEC"/>
+                <outlet property="platformAddressTextField" destination="Le1-XG-phh" id="v4c-ST-7eb"/>
+                <outlet property="platformDescriptionTextView" destination="BdZ-to-rWX" id="At1-t1-Jff"/>
+                <outlet property="platformNameTextField" destination="G4O-PG-Nga" id="YoT-J1-fnP"/>
+                <outlet property="userNameTextField" destination="zTb-8E-9uJ" id="NyX-TC-EvW"/>
+                <outlet property="userPswTextField" destination="9dn-ig-dOq" id="nGo-HQ-zFl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zTb-8E-9uJ">
+                    <rect key="frame" x="10" y="40" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9dn-ig-dOq">
+                    <rect key="frame" x="10" y="80" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入其他密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fd5-Ft-NtN">
+                    <rect key="frame" x="10" y="120" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入平台名" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G4O-PG-Nga">
+                    <rect key="frame" x="10" y="160" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入平台地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-XG-phh">
+                    <rect key="frame" x="10" y="200" width="355" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="请输入备注" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BdZ-to-rWX">
+                    <rect key="frame" x="10" y="250" width="355" height="367"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="BdZ-to-rWX" secondAttribute="trailing" constant="10" id="0ON-zz-MT1"/>
+                <constraint firstAttribute="trailing" secondItem="Fd5-Ft-NtN" secondAttribute="trailing" constant="10" id="3Yy-ep-abu"/>
+                <constraint firstItem="9dn-ig-dOq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="4aZ-T5-FNJ"/>
+                <constraint firstItem="zTb-8E-9uJ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="5la-Bv-GBU"/>
+                <constraint firstAttribute="trailing" secondItem="Le1-XG-phh" secondAttribute="trailing" constant="10" id="72w-pK-e3N"/>
+                <constraint firstItem="BdZ-to-rWX" firstAttribute="top" secondItem="Le1-XG-phh" secondAttribute="bottom" constant="20" id="97c-4a-xnp"/>
+                <constraint firstItem="G4O-PG-Nga" firstAttribute="top" secondItem="Fd5-Ft-NtN" secondAttribute="bottom" constant="10" id="GGH-8v-Osh"/>
+                <constraint firstAttribute="trailing" secondItem="9dn-ig-dOq" secondAttribute="trailing" constant="10" id="Px1-Jy-mlz"/>
+                <constraint firstItem="9dn-ig-dOq" firstAttribute="top" secondItem="zTb-8E-9uJ" secondAttribute="bottom" constant="10" id="SzC-FY-pso"/>
+                <constraint firstItem="Le1-XG-phh" firstAttribute="top" secondItem="G4O-PG-Nga" secondAttribute="bottom" constant="10" id="WVx-Ij-fiZ"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="BdZ-to-rWX" secondAttribute="bottom" constant="50" id="YLu-gX-V7Y"/>
+                <constraint firstItem="Fd5-Ft-NtN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="faC-vG-05i"/>
+                <constraint firstItem="G4O-PG-Nga" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="g5V-r7-tYH"/>
+                <constraint firstItem="BdZ-to-rWX" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="gE9-Vz-sgn"/>
+                <constraint firstAttribute="trailing" secondItem="G4O-PG-Nga" secondAttribute="trailing" constant="10" id="kgX-We-kns"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="zTb-8E-9uJ" secondAttribute="trailing" constant="10" id="l36-uO-1N6"/>
+                <constraint firstItem="Le1-XG-phh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="sSP-0m-sJe"/>
+                <constraint firstItem="zTb-8E-9uJ" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="vNf-IJ-ouY"/>
+                <constraint firstItem="Fd5-Ft-NtN" firstAttribute="top" secondItem="9dn-ig-dOq" secondAttribute="bottom" constant="10" id="wH4-8s-Cro"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="71.5" y="76.5"/>
+        </view>
+    </objects>
+</document>
